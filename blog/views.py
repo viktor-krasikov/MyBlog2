@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .forms import PostForm
 
@@ -35,4 +35,10 @@ class PostEditView(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/post_form.html'
+    success_url = '/posts/'
+
+
+class PostDeleteView(DeleteView):
+    model = Post
+    template_name = 'blog/post_confirm_delete.html'
     success_url = '/posts/'

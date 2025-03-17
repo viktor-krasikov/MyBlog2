@@ -6,6 +6,7 @@
             <li>
                 <h2><a href="{{ post.id }}/">{{ post.title }}</a></h2>
                 <a href="{{ post.id }}/edit/">Редактировать</a>
+                <a href="{{ post.id }}/delete/">Удалить</a>
                 <p>{{ post.content }}</p>
             </li>
         {% empty %}
