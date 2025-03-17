@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Post
 from .forms import PostForm
 
@@ -29,3 +29,10 @@ class PostCreateView(CreateView):
     form_class = PostForm
     template_name = 'blog/post_form.html'
     success_url = '/posts/'  # перенаправление после успешного создания
+
+
+class PostEditView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'blog/post_form.html'
+    success_url = '/posts/'
