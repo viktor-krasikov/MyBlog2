@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Главная страница</title>
-</head>
-<body>
-<h1>Добро пожаловать в мой блог!</h1>
-<a href="{% url 'about' %}">Обо мне</a>
-<a href="{% url 'post_list' %}">Список постов</a>
-</body>
-</html>
+{% extends 'blog/_base.html' %}
+
+{% block title %}Добро пожаловать в мой блог!{% endblock %}
+
+{% block content %}
+    <p>Этот блог было необходимо разработать для сдачи домашнего задания
+    по курсу Python-разработчик тема №16.</p>
+{% endblock %}

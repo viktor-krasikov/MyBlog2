@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <h1>Мой блог - {% block title %}{% endblock %}</h1>
+</header>
+
+<nav>
+    <a href="{% url 'post_list' %}">Главная</a>
+    <a href="{% url 'about' %}">Обо мне</a>
+</nav>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>© 2025 Мой блог</p>
+</footer>
+</body>
+</html>
