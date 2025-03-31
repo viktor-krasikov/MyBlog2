@@ -51,3 +51,36 @@ html, body, .container {
     height: 100%;
     margin: 0;
 }
+
+.product {
+    display: grid;
+    grid-template-columns: 200px 1.7fr 0.7fr;
+    grid-template-rows: 200px 30px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+    "image name price"
+    "image buttons price";
+}
+
+.price {
+    grid-area: price;
+}
+
+.image {
+    grid-area: image;
+}
+
+.image img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.name {
+    grid-area: name;
+}
+
+.buttons {
+    grid-area: buttons;
+}

@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+
+{% block title %}Товар {{ product.name|upper }}{% endblock %}
+
+{% block content %}
+    <div class="product">
+        <div class="image"><img src="/static/images/products/{{ product.image }}"/></div>
+        <div class="name">{{ product.description }}</div>
+        <div class="price">{{ product.price }}</div>
+        <div class="buttons">
+            <a href="buy/">КУПИТЬ</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% block title %}Список товаров{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for product in products %}
+            <li>
+                <div class="product">
+                    <div class="image"><img src="/static/images/products/{{ product.image }}" /></div>
+                    <div class="name">{{ product.name }}</div>
+                    <div class="price">{{ product.price }}</div>
+                    <div class="buttons">
+                        <a href="{{ product.id }}/">Подробнее</a>
+                    </div>
+                </div>
+            </li>
+        {% empty %}
+            <p>Пока нет товаров.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}
