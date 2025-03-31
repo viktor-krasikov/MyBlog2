@@ -23,7 +23,7 @@ class UrlsTests(TestCase):
 
 class FormTests(TestCase):
     def test_create_post_form(self):
-        response = self.client.post(reverse('posts/create/'), {
+        response = self.client.post(reverse('post_create'), {
             'title': 'New Post',
             'content': 'New content',
         })
